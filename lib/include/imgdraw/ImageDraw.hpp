@@ -1,0 +1,4 @@
+#ifndef IMAGEDRAW_HPP
+#define IMAGEDRAW_HPP
+
+#endif // IMAGEDRAW_HPP

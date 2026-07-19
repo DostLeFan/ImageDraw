@@ -1,0 +1,10 @@
+# Directories
+
+build/
+bin/
+res/
+
+# Files
+
+res.zip
+*.exe
