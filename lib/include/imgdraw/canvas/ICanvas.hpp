@@ -2,6 +2,7 @@
 #define DEF_ICANVAS
 
 #include <string>
+#include <vector>
 #include "../shape/Point.hpp"
 #include "../type/Error.hpp"
 
@@ -22,7 +23,12 @@ namespace imgdraw
 			
 			// Drawing primitives. Color is carried by Point itself.
 			virtual void drawPoint(Point const& point) = 0;
-			virtual void drawCircle(Point const& point, float radius) = 0;
+			virtual void drawCircle(Point const& center, float radius, bool filled = true) = 0;
+			virtual void drawLine(Point const& from, Point const& to) = 0;
+			virtual void drawArc(Point const& center, float radius, float startAngleDeg, float endAngleDeg) = 0;
+			
+			// Fill inside polygon defined by "outline".
+			virtual void fill(std::vector<Point> const& outline) = 0;
 			
 			// Writing on disk. Format can be deducted, depending on implementation and/or extension.
 			virtual DrawError save(std::string const& path) const = 0;
