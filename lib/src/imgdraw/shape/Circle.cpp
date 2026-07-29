@@ -11,7 +11,7 @@ namespace imgdraw
 	
 	void Circle::draw(ICanvas& canvas) const
 	{
-		canvas.drawCircle(getOrigin(), m_radius);
+		canvas.drawCircle(getOrigin(), m_radius, this->getFill());
 	}
 	
 	std::unique_ptr<Drawable> Circle::clone() const
